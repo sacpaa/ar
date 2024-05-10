@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Personal Portfolio Web</title>
+        <link rel="stylesheet" href="style1.css">
+        <style>
+             .about{
+                min-height: 100vh;
+                width: 100%;
+                padding: 78px 0px;
+        
+            }
+            .about img{
+                max-width: 500px;
+                margin-top: 10%;
+                margin-right:-20px ;
+                margin-bottom: 20%;
+                border: 2px solid #2b9348;
+                box-shadow: 0 0 5px #2b9348,  0 0 25px#2b9348;
+                border-radius: 50%;
+                opacity: 0;
+                animation: zoomIn 1s ease forwards;
+                animation-delay: .3s;  
+            }
+            .main{
+                width: 1200px;
+                max-width: 95%;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .about-text h1{
+                color:  #1f1f1f;
+                font-size: 50px;
+                text-transform: capitalize;
+                margin-bottom: 30px;
+                margin-left: 50px;
+                opacity: 0;
+                animation: slideBottom 1s ease forwards;
+                animation-delay: .7s;
+
+            }
+            .about-text h5{
+                color:  #1f1f1f;
+                font-size: 28px;
+                margin-bottom:20px ;
+                margin-left: 50px;
+                opacity: 0;
+                animation: slideRight 1s ease forwards;
+                animation-delay: 1s;
+
+            }
+            span{
+                color:#2b9348;
+
+            }
+            .about-text p{
+                color: #1f1f1f;
+                letter-spacing: 1px;
+                line-height: 28px;
+                font-size: 18px;
+                margin-bottom: 50px;
+                margin-left: 50px;
+                opacity: 0;
+                animation: slideLeft 1s ease forwards;
+                animation-delay: .7s;
+            }
+            button{
+                background: transparent;
+                color: #2b9348;
+                font-size:16px;
+                text-decoration: none;
+                border: 2px solid #2b9348;
+                font-weight: bold;
+                padding: 13px 30px;
+                border-radius: 30px ;
+                transition: .4s ease;
+            }
+            button:hover{
+                background: #2b9348;
+                color:  #1f1f1f;
+                border: 2px solid #2b9348;
+                box-shadow: 0 0 5px #2b9348,0 0 25px#2b9348;
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+            .cv{
+                margin-left: 0.5em;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <header class="header">
+            <a href="#" class="logo"><span>A</span>SB.</a>
+
+            <nav class="navigation">
+                <a href="index.html" style="--i:1;" class="active">Home</a>
+                <a href="About.html" style="--i:2;"  >About</a>
+                <a href="Gallery.html"style="--i:3;" >Gallery</a>
+                <a href="Hobies.html" style="--i:4;" >Hobbies</a>
+                <a href="Contact1.html"style="--i:5;" >Contact</a>
+            </nav>
+        </header>
+        <section class="about">
+            <div class="main">
+                <img src="Masterpiece 13.png">
+                <div class="about-text">
+                <h1><span>My </span>Gallery</h1>
+                <p> Welcome to my gallery! It's a place where you can see all the pictures I've taken. Each photo tells a story and shows something special.
+                     You'll find pictures of beautiful places, interesting people, and lots more. Take your time to look around and enjoy the journey through my lens. 
+                </p>
+                
+                <a href="Gallery3.html"><button type="btn">See More</button></a>
+            </div>
+
+ 
+        </section>
+    </body>
+</html>

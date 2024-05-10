@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio Web</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <style>
+        .ctr-accordion{
+         max-width: 1400px;
+         height: 720px;
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         align-content: space-around;
+         gap: 20px;
+         overflow: hidden;
+         margin: 150px auto;
+        }
+ 
+        .tab{
+          position: relative;
+        width: 20%;
+         height: inherit;
+         padding: 20px;
+        background: rgb(150,150,150);
+        cursor: pointer;
+        transition: width .5s ease;
+         border-radius: 25px;
+        }
+ 
+        .tab img{
+        position: absolute;
+           top: 0;
+         left: 0;
+          width: 100%;
+         height: 100%;
+         object-fit: cover;
+         transition: all 0.5s ease;
+          border-radius: 25px;
+          opacity: 0;
+         animation: zoomIn 1s ease forwards;
+         animation-delay: .1s;
+        }
+ 
+        .tab:hover img{
+         opacity: 0.6;
+        }
+        .tab:hover{
+         width: 80%;
+        }
+        .caption {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          color:lightblue;
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+ 
+        
+
+    </style>
+</head>
+<body> 
+
+    <header class="header">
+        <a href="#" class="logo"><span>A</span>S<span>B</span>.</a>
+
+        <nav class="navigation">
+            <a href="index.html" style="--i:1;" class="active">Home</a>
+            <a href="About.html" style="--i:2;"  >About</a>
+            <a href="Gallery.html"style="--i:3;" >Gallery</a>
+            <a href="Hobies.html" style="--i:4;" >Hobbies</a>
+            <a href="Contact1.html"style="--i:5;" >Contact</a>
+        </nav>
+    </header>
+    <div class="ctr-accordion">
+        <div class="tab">
+            <img src="AAG\1.jpg">
+            <div class="caption">Picture ka muna Nak</div>
+        </div>
+        <div class="tab">
+            <img src="AAG\2.jpg">
+            <div class="caption">Serious</div>
+        </div>
+        <div class="tab">
+            <img src="AAG\3.jpg">
+            <div class="caption">Agin popogi</div>
+        </div>
+        <div class="tab">
+            <img src="AAG\4.jpg">
+            <div class="caption">Look up </div>
+        </div>
+        <div class="tab">
+            <img src="AAG\5.jpg">
+            <div class="caption">Lighting</div>
+        </div>
+        <div class="tab">
+            <img src="AAG\6.jpg">
+            <div class="caption">Walking 10k</div>
+        </div>
+        <div class="tab">
+            <img src="AAG\7.jpg">
+            <div class="caption">With my Handsome Cousin</div>
+        </div>
+        <div class="tab">
+            <img src="AAG\8.jpg">
+            <div class="caption">One of my Favorite Car</div>
+        </div>
+        <div class="tab">
+            <img src="AAG\9.jpeg">
+            <div class="caption">"Me, myself, and I."</div>
+        </div>
+        <div class="tab">
+            <img src="AAG\10.jpg">
+            <div class="caption">Just me being me</div>
+        </div>
+   </div>
+</body>
+
+    <script src="js.js"></script>
+</body>
+</html>

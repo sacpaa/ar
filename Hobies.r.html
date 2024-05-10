@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Personal Portfolio Web</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <style> 
+    body{
+    margin: 0;
+    border: #EEE;
+    user-select: none;
+    background: #d5ffdd;
+    }
+
+    .slider{
+    width: 50%;
+    height: 32vw;
+    margin: 100px auto;
+    position: relative;
+    perspective: 1400px;
+    transform-style: preserve-3d;
+    }
+
+    .slider label,
+    .slider label img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 400ms ease;
+    
+    }
+
+    input[type = radio]{
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 108%;
+    left: 50%;
+    transform: translateX(-83px);
+    margin: 0 15px 0 0;
+    cursor: pointer;
+    opacity: 0.4;
+    }
+
+    input[type=radio]:checked{
+    opacity: 1;
+    }
+    
+    #s1:checked ~ #slide1,
+    #s2:checked ~ #slide2,
+    #s3:checked ~ #slide3,
+    #s4:checked ~ #slide4{
+    box-shadow: 0 13px 26px rgba(0,0,0,0.3),
+            0 12px 6px rgba(0,0,0,0.2);
+    transform: translate3d(0%, 0, 0px);
+    }
+
+
+
+
+    #s1:checked ~ #slide2,
+    #s2:checked ~ #slide3,
+    #s3:checked ~ #slide4,
+    #s5:checked ~ #slide1{
+    box-shadow: 0 6px 10px rgba(0,0,0,0.3),
+            0 2px 2px rgba(0,0,0,0.2);
+    transform: translate3d(20%, 0, -100px);
+    }
+
+
+
+    #s1:checked ~ #slide3,
+    #s2:checked ~ #slide4,
+    #s4:checked ~ #slide1,
+    #s5:checked ~ #slide2{
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+            
+    transform: translate3d(40%, 0, -250px);
+    }
+
+
+    #s1:checked ~ #slide4,
+    #s3:checked ~ #slide1,
+    #s4:checked ~ #slide2,
+    #s5:checked ~ #slide3{
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+            
+    transform: translate3d(-40%, 0, -250px);
+    }
+
+
+    #s2:checked ~ #slide1,
+    #s3:checked ~ #slide2,
+    #s4:checked ~ #slide3,
+    #s5:checked ~ #slide4{
+    box-shadow: 0 6px 10px rgba(0,0,0,0.3),
+            0 2px 2px rgba(0,0,0,0.2);
+            
+    transform: translate3d(-20%, 0, -100px);
+    }
+    .caption {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: lightblue;
+        padding: 5px 10px;
+        font-size: 14px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .slider label:hover .caption {
+        opacity: 1;
+    }
+
+           
+
+        
+  
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <a href="#" class="logo"><span>A</span>SB.</a>
+
+        <nav class="navigation">
+            <a href="index.html" style="--i:1;" class="active">Home</a>
+            <a href="About.html" style="--i:2;"  >About</a>
+            <a href="Gallery.html"style="--i:3;" >Gallery</a>
+            <a href="Hobies.html" style="--i:4;" >Hobbies</a>
+            <a href="Contact1.html"style="--i:5;" >Contact</a>
+        </nav>
+    </header>
+
+    <section class="slider">
+        <input type="radio" name="slider" id="s1" checked>
+        <input type="radio" name="slider" id="s2">
+        <input type="radio" name="slider" id="s3">
+        <input type="radio" name="slider" id="s4">
+
+        <label for="s1" id="slide1">
+            <img src="Hobbies\a.jpg" alt="">
+            <span class="caption">
+                Basketball is one of my hobbies. Playing on the court,
+                 watching games, and analyzing strategies all bring me joy.
+            </span>
+        </label>
+        <label for="s2" id="slide2">
+            <img src="Hobbies\b.jpeg" alt="">
+            <span class="caption">Singing is another one of my hobbies. Whether I'm belting out tunes in the shower, joining a choir, or simply
+                 humming along to my favorite songs, music brings me a 
+                lot of happiness and allows me to express myself creatively.</span>
+        </label>
+        <label for="s3" id="slide3">
+            <img src="Hobbies\c.jpeg" alt="">
+            <span class="caption">Eating is definitely one of my hobbies too! Exploring new cuisines, trying out different recipes, and sharing meals with friends and family are
+                 all things I enjoy. From savory dishes to sweet treats, food is not just sustenance but
+                 a source of pleasure and connection for me.</span>
+        </label>
+        <label for="s4" id="slide4">
+            <img src="Hobbies\e.jpg" alt="">
+            <span class="caption">
+                Hiking is one of my favorite hobbies. There's something so refreshing about being out in nature, breathing in the fresh air, 
+                and exploring new trails. Whether it's a challenging mountain ascent or a leisurely stroll through the woods, hiking allows me to disconnect from the hustle and bustle of daily life and reconnect with the 
+                beauty of the natural world. Plus, the sense of accomplishment when reaching a summit or 
+                discovering a hidden gem along the trail is unbeatable.</span>
+        </label>
+    </section>
+    
+</body>
+</html>
